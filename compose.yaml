@@ -11,7 +11,7 @@ services:    rocm57_pt23_comfyui:
         group_add:
             - video
         volumes:
-            - /media/intel/comfy:/Comfyui
+            - /media/intel/ComfyUI:/ComfyUI
             - /media/intel/ComfyUI/models:/ComfyUI/models
             - /media/intel/ComfyUI/output:/ComfyUI/output
             - /media/intel/ComfyUI/input:/ComfyUI/input
