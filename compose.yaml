@@ -1,0 +1,22 @@
+name: rocm57_pt23_comfyui
+services:
+    rocm57_pt23_comfyui:
+        tty: true
+        stdin_open: true
+        ports:
+            - 2222:22
+            - 8188:8188
+        devices:
+            - /dev/kfd
+            - /dev/dri
+        group_add:
+            - video
+        volumes:
+            - /media/intel/comfy:/Comfyui
+            - /media/intel/ComfyUI/models:/ComfyUI/models
+            - /media/intel/ComfyUI/output:/ComfyUI/output
+            - /media/intel/ComfyUI/input:/ComfyUI/input
+        environment:
+            - args=--use-pytorch-cross-attention
+        image: rocm57_pt23_comfyui:v1
+        command: bash
