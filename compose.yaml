@@ -1,11 +1,10 @@
-name: rocm57_pt23_comfyui
-services:
-    rocm57_pt23_comfyui:
+version: "3"
+services:    rocm57_pt23_comfyui:
         tty: true
         stdin_open: true
         ports:
-            - 2222:22
-            - 8188:8188
+            - "2222:22"
+            - "8188:8188"
         devices:
             - /dev/kfd
             - /dev/dri
